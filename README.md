@@ -43,7 +43,7 @@ It should iterate over all the subfolders looking for git repos and it will try 
 git pull origin main
 git pull origin master
 git add .
-git commit -m "." (you can change the "." value by altering the const commitMessage on sync-repos.ts)
+git commit -m "your commit message"
 git push
 ```
 
