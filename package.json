@@ -6,8 +6,7 @@
     },
     "scripts": {
         "sync-repos": "bun sync-repos.ts",
-        "sync-repos-lesser": "bun sync-repos.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized\" \"Your commit message here\"",
-        "sync-repos-lesserfunctions": "bun sync-repos.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized/ServerSide/SSLesserFunctions\""
+        "sync-repos-lesser": "bun sync-repos.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized\" \"Your commit message here\""
         
     }
 }

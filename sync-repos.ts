@@ -103,26 +103,16 @@ async function main() {
   console.log(process.argv);
   console.log(process.argv[2]);
   console.log(process.argv[3]);
-  
-  let currentDir = process.cwd();
-  let commitMessage = ".";
-  
-  // Find the index of the "--" argument
-  const separatorIndex = process.argv.indexOf("--");
-  
-  if (separatorIndex !== -1 && separatorIndex < process.argv.length - 1) {
-    // Everything after "--" is considered as arguments
-    const args = process.argv.slice(separatorIndex + 1);
-    
-    // The first argument after "--" is the directory
-    currentDir = args[0];
-    
-    // If there's a second argument, it's the commit message
-    if (args.length > 1) {
-      commitMessage = args.slice(1).join(' ');
-    }
-  }
 
+  let currentDir = process.cwd();
+  if(process.argv.length >= 3)
+    currentDir = process.argv[2];
+
+  let commitMessage = ".";
+  if(process.argv.length >= 4)
+    commitMessage = process.argv[3];
+  
+  
   console.log("Current Directory:", currentDir);
   console.log("Commit Message:", commitMessage);
 
