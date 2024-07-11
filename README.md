@@ -3,7 +3,8 @@ This project aims to solve the problem that comes with syncing many repos with G
 It uses bun and git bash.
 
 
-To use it, follow these steps:
+
+# Installation
 
 install bun for windows:
 ```
@@ -30,7 +31,9 @@ then install the necessary packages (this is equivalent to npm install)
 bun install
 ```
 
-then run with:
+
+# Running
+
 ```
 bun sync-repos.ts -- "C:/Path/to/your/projects/root/folder"
 ```
