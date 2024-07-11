@@ -100,16 +100,29 @@ async function gitOperations(dir, commitMessage) {
 }
 
 async function main() {
-  let commitMessage = "."
+  console.log(process.argv);
+  
   let currentDir = process.cwd();
-  console.log(process.argv)
-  if(process.argv.length > 2)
-    currentDir = process.argv.slice(2).join(' ');;
-
-  if (!commitMessage) {
-    console.error('Please provide a commit message as an argument.');
-    process.exit(1);
+  let commitMessage = ".";
+  
+  // Find the index of the "--" argument
+  const separatorIndex = process.argv.indexOf("--");
+  
+  if (separatorIndex !== -1 && separatorIndex < process.argv.length - 1) {
+    // Everything after "--" is considered as arguments
+    const args = process.argv.slice(separatorIndex + 1);
+    
+    // The first argument after "--" is the directory
+    currentDir = args[0];
+    
+    // If there's a second argument, it's the commit message
+    if (args.length > 1) {
+      commitMessage = args.slice(1).join(' ');
+    }
   }
+
+  console.log("Current Directory:", currentDir);
+  console.log("Commit Message:", commitMessage);
 
   const gitFolders = await findGitFolders(currentDir);
 

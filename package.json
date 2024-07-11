@@ -5,9 +5,9 @@
         "util": "^0.12.5"
     },
     "scripts": {
-        "sync-repos": "bun git-operations.ts",
-        "sync-repos-lesser": "bun git-operations.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized\"",
-        "sync-repos-lesserfunctions": "bun git-operations.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized/ServerSide/SSLesserFunctions\""
+        "sync-repos": "bun sync-repos.ts",
+        "sync-repos-lesser": "bun sync-repos.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized\" \"Your commit message here\"",
+        "sync-repos-lesserfunctions": "bun sync-repos.ts -- \"C:/Users/lrspe/Documents/Projetos/Lesser-24-05-10-reorganized/ServerSide/SSLesserFunctions\""
         
     }
 }
