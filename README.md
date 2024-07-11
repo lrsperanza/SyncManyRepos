@@ -35,7 +35,7 @@ bun install
 # Running
 
 ```
-bun sync-repos.ts -- "C:/Path/to/your/projects/root/folder"
+bun sync-repos.ts -- "C:/Path/to/your/projects/root/folder" "your commit message"
 ```
 
 It should iterate over all the subfolders looking for git repos and it will try to apply to each of them:
