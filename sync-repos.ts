@@ -101,6 +101,8 @@ async function gitOperations(dir, commitMessage) {
 
 async function main() {
   console.log(process.argv);
+  console.log(process.argv[2]);
+  console.log(process.argv[3]);
   
   let currentDir = process.cwd();
   let commitMessage = ".";
