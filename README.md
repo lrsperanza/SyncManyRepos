@@ -18,7 +18,7 @@ winget install --id Git.Git -e --source winget
 
 clone the repo:
 ```
-git clone github.com/lrsperanza/SyncManyRepos
+git clone https://github.com/lrsperanza/SyncManyRepos
 ```
 
 navigate to the project folder
